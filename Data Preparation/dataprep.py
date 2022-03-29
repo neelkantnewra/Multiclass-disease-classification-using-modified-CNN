@@ -2,63 +2,123 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import cv2
+
 from tqdm.notebook import tqdm_notebook
 from keras.models import load_model
+from keras.utils import np_utils
 from tensorflow.keras.optimizers import Adam
 
+from model.umodel import dice_coef,dice_coef_loss,unet
+from tools.imgsegment import SegmentImage
+
 IMG_SIZE = 512
+LR = 1e-5
 
 # U-Net model
+model = unet(input_size=(512,512,1))
+model.load_weight("weight.best.hdf5")
+model.compile(optimizer=Adam(learning_rate=LR), loss=dice_coef_loss, metrics=['binary_accuracy'])
 
-def dice_coef(y_true, y_pred):
-    y_true_f = keras.flatten(y_true)
-    y_pred_f = keras.flatten(y_pred)
-    intersection = keras.sum(y_true_f * y_pred_f)
-    return (2. * intersection + 1) / (keras.sum(y_true_f) + keras.sum(y_pred_f) + 1)
+cat_path = '../input/chest-xray-pneumonia/chest_xray/train'
+categories = os.listdir(cat_path)
 
-def dice_coef_loss(y_true, y_pred):
-    return -dice_coef(y_true, y_pred)
+labels = [i for i in range(len(categories))]
+label_dict = dict(zip(categories,labels))
 
-def unet(input_size=(256,256,1)):
-    inputs = Input(input_size)
-    
-    conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)
-    conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(conv1)
-    pool1 = MaxPooling2D(pool_size=(2, 2))(conv1)
+directory = ['train']
+data_path = "../input/chest-xray-pneumonia/chest_xray"
+train_data = []
+train_target = []
+for path in tqdm_notebook(directory):
+    image_dir_path = os.path.join(data_path,path)
+    image_dir_file = os.listdir(image_dir_path)
+    for image in tqdm_notebook(image_dir_file):
+            image_path = os.path.join(image_dir_path,image)
+            image_path_file = os.listdir(image_path)
+            for img_name in tqdm_notebook(image_path_file):
+                img_path = os.path.join(image_path,img_name)
+                try:
+                    maskapply,masked_image,chest_image = SegmentImage(model=model,path=img_path,img_shape = (IMG_SIZE,IMG_SIZE),threshold = 0.5)
+                    train_data.append(masked_image)
+                    train_target.append(label_dict[image])
+                except Exception as e:
+                    print("Exception: ",e)
+                    
+data = np.array(train_data)/255.0
+data = np.reshape(data,(data.shape[0],IMG_SIZE,IMG_SIZE,1))
+target = np.array(train_target)
 
-    conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(pool1)
-    conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(conv2)
-    pool2 = MaxPooling2D(pool_size=(2, 2))(conv2)
+new_target = np_utils.to_categorical(target)
+np.save('train_data',data)
+np.save('train_target',new_target)                    
 
-    conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(pool2)
-    conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(conv3)
-    pool3 = MaxPooling2D(pool_size=(2, 2))(conv3)
+directory = ['val']
+data_path = "../input/chest-xray-pneumonia/chest_xray"
 
-    conv4 = Conv2D(256, (3, 3), activation='relu', padding='same')(pool3)
-    conv4 = Conv2D(256, (3, 3), activation='relu', padding='same')(conv4)
-    pool4 = MaxPooling2D(pool_size=(2, 2))(conv4)
+val_data = []
+val_target = []
+for path in tqdm_notebook(directory):
+    image_dir_path = os.path.join(data_path,path)
+    image_dir_file = os.listdir(image_dir_path)
+    for image in tqdm_notebook(image_dir_file):
+            image_path = os.path.join(image_dir_path,image)
+            image_path_file = os.listdir(image_path)
+            for img_name in tqdm_notebook(image_path_file):
+                img_path = os.path.join(image_path,img_name)
+                try:
+                    maskapply,masked_image,chest_image = SegmentImage(model=model,path=img_path,img_shape = (IMG_SIZE,IMG_SIZE),threshold = 0.5)
+                    val_data.append(masked_image)
+                    val_target.append(label_dict[image])
+                except Exception as e:
+                    print("Exception: ",e)
 
-    conv5 = Conv2D(512, (3, 3), activation='relu', padding='same')(pool4)
-    conv5 = Conv2D(512, (3, 3), activation='relu', padding='same')(conv5)
+data = np.array(val_data)/255.0
+data = np.reshape(data,(data.shape[0],IMG_SIZE,IMG_SIZE,1))
+target = np.array(val_target)
 
-    up6 = concatenate([Conv2DTranspose(256, (2, 2), strides=(2, 2), padding='same')(conv5), conv4], axis=3)
-    conv6 = Conv2D(256, (3, 3), activation='relu', padding='same')(up6)
-    conv6 = Conv2D(256, (3, 3), activation='relu', padding='same')(conv6)
+new_target = np_utils.to_categorical(target)
+np.save('val_data',data)
+np.save('val_target',new_target)
 
-    up7 = concatenate([Conv2DTranspose(128, (2, 2), strides=(2, 2), padding='same')(conv6), conv3], axis=3)
-    conv7 = Conv2D(128, (3, 3), activation='relu', padding='same')(up7)
-    conv7 = Conv2D(128, (3, 3), activation='relu', padding='same')(conv7)
+directory = ['test']
+data_path = "../input/chest-xray-pneumonia/chest_xray"
 
-    up8 = concatenate([Conv2DTranspose(64, (2, 2), strides=(2, 2), padding='same')(conv7), conv2], axis=3)
-    conv8 = Conv2D(64, (3, 3), activation='relu', padding='same')(up8)
-    conv8 = Conv2D(64, (3, 3), activation='relu', padding='same')(conv8)
+test_data = []
+test_target = []
+for path in tqdm_notebook(directory):
+    image_dir_path = os.path.join(data_path,path)
+    image_dir_file = os.listdir(image_dir_path)
+    for image in tqdm_notebook(image_dir_file):
+            image_path = os.path.join(image_dir_path,image)
+            image_path_file = os.listdir(image_path)
+            for img_name in tqdm_notebook(image_path_file):
+                img_path = os.path.join(image_path,img_name)
+                try:
+                    maskapply,masked_image,chest_image = SegmentImage(model=model,path=img_path,img_shape = (IMG_SIZE,IMG_SIZE),threshold = 0.5)
+                    test_data.append(masked_image)
+                    test_target.append(label_dict[image])
+                except Exception as e:
+                    print("Exception: ",e)
+               
 
-    up9 = concatenate([Conv2DTranspose(32, (2, 2), strides=(2, 2), padding='same')(conv8), conv1], axis=3)
-    conv9 = Conv2D(32, (3, 3), activation='relu', padding='same')(up9)
-    conv9 = Conv2D(32, (3, 3), activation='relu', padding='same')(conv9)
+data = np.array(test_data)/255.0
+data = np.reshape(data,(data.shape[0],IMG_SIZE,IMG_SIZE,1))
+target = np.array(test_target)
 
-    conv10 = Conv2D(1, (1, 1), activation='sigmoid')(conv9)
+from keras.utils import np_utils
 
-    return Model(inputs=[inputs], outputs=[conv10])
-  
-  
+new_target = np_utils.to_categorical(target)
+np.save('test_data',data)
+np.save('test_target',new_target)
+
+print(f"Total number of normal case: {val_target.count(1)+test_target.count(1)+train_target.count(1)}")
+print(f"Total number of pneumonia case: {val_target.count(0)+test_target.count(0)+train_target.count(0)}")
+
+print(f"Total number of normal case test: {test_target.count(1)}")
+print(f"Total number of pneumonia case test: {test_target.count(0)}")
+
+print(f"Total number of normal case val: {val_target.count(1)}")
+print(f"Total number of pneumonia case val: {val_target.count(0)}")
+
+print(f"Total number of normal case train: {train_target.count(1)}")
+print(f"Total number of pneumonia case train: {train_target.count(0)}")
