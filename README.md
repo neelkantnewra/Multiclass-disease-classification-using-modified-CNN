@@ -1,4 +1,4 @@
-# Pneumonia detection using UC-Net
+# Multiclass disease detection using UC-Net
 
 About
 -----
