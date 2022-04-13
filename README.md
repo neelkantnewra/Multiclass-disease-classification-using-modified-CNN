@@ -31,4 +31,4 @@ target are kept categorical
 |Validating| 38 |
 |Testing| 771|
 
-Prepared Dataset Link: https://www.kaggle.com/datasets/newra008/cxr-data-for-multiclass-classification
+Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kaggle.com/datasets/newra008/cxr-data-for-multiclass-classification)
