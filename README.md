@@ -26,6 +26,8 @@ Mask will assure us that our model is learning on the right data of the CXR, and
 
 It is the simple CXR images which is flatten to form ndarray.
 
+<img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Image/normal-data.png">
+
 target are kept categorical
 | |Total Images|
 | :---: | :---: |
