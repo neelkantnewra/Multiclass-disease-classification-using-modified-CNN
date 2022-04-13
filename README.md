@@ -25,7 +25,8 @@ Mask will assure us that our model is learning on the right data of the CXR, and
 It is the simple CXR images which is flatten to form ndarray.
 
 target are kept categorical
-
-Total Images for training: 6326
-Total Image for validating: 38
-Total Image for testing: 771
+| |Total Images|
+| :---: | :---: |
+|Training| 6326|
+|Validating| 38 |
+|Testing| 771|
