@@ -1,7 +1,31 @@
-# Multiclass disease detection using UC-Net
+# Multiclass disease detection using Modified CNN
 
 About
 -----
-This repositry is for pneumonia detection using the chest x ray
+We will be testing various model available for multiclass classification problem.
 
+Method
+------
 
+We have collected Chest X-Ray(CXR) images of various dimensions with label `Pneumonia`,`Normal`,`Covid-19`,`Tuberculosis`, and resize it to 128x128 pixel grayscale images. 
+We have developed two types of dataset:
+
+- Segmented Image Dataset
+- Normal Image Dataset
+
+Segmented Image Dataset
+-----------------------
+We have used U-Net model for the prediction of mask for selcting only lung portion. Although Accuracy of U-Net model was itself very low so we get very few clean segmented mask. This may be the reason we are getting low accuracy for the segmented data. 
+
+## Why we want Mask?
+Mask will assure us that our model is learning on the right data of the chest, It can also be helpful for skipping our model at certain pixel of the images.
+
+## Normal Image Dataset
+
+It is the simple CXR images which is flatten to form ndarray.
+
+target are kept categorical
+
+Total Images for training: 6326
+Total Image for validating: 38
+Total Image for testing: 771
