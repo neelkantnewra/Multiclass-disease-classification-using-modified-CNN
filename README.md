@@ -7,7 +7,7 @@ We will be modifing and testing various model which have achieved higher accurac
 Method
 ------
 
-We have collected Chest X-Ray(CXR) images of various dimensions with label `Pneumonia`,`Normal`,`Covid-19`,`Tuberculosis`, and resize it to 128x128 pixel grayscale images. 
+We have collected Chest X-Ray(CXR) images of various dimensions with label `Pneumonia`,`Normal`,`Covid-19`,`Tuberculosis`, and resize it to `128x128` pixel grayscale images. 
 We have developed two types of dataset:
 
 - Segmented Image Dataset
