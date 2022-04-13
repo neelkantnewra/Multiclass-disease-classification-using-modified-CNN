@@ -32,3 +32,41 @@ target are kept categorical
 |Testing| 771|
 
 Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kaggle.com/datasets/newra008/cxr-data-for-multiclass-classification)
+
+## Model Performance
+
+Without Segmentation
+--------------------
+
+<table>
+  <tbody>
+    <tr>
+      <th rowspan="2">Model</th>
+      <th align="center" colspan="4">Training</th>
+      <th align="center" colspan="4">Testing</th>
+    </tr>
+    <tr>
+      <td align="center">Accuracy</td>
+      <td align="center">Precision</td>
+      <td align="center">Recall</td>
+      <td align="center">F1-score</td>
+      <td align="center">Accuracy</td>
+      <td align="center">Precision</td>
+      <td align="center">Recall</td>
+      <td align="center">F1-score</td>
+    </tr>
+    <tr>
+      <td>VGG-13</td>
+      <td align="center">0.9783</td>
+      <td align="center">0.9788</td>
+      <td align="center">0.9780</td>
+      <td align="center">0.9783</td>
+      <td align="center">0.7743</td>
+      <td align="center">0.7775</td>
+      <td align="center">0.7704</td>
+      <td align="center">0.7739</td>
+    </tr>
+  </tbody>
+</table>
+
+
