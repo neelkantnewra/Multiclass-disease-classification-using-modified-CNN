@@ -69,4 +69,7 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
   </tbody>
 </table>
 
+### Confusion Metrics
 
+<img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/VGG13/Confusion%20matrix.png" width="400px">
+<img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/VGG13/Confusion%20matrix.png" width="400px">
