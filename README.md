@@ -2,7 +2,7 @@
 
 About
 -----
-We will be testing various model available for multiclass classification problem.
+We will be modifing and testing various model which have achieved higher accuracy for multiclass classification problem to achieve good result.
 
 Method
 ------
