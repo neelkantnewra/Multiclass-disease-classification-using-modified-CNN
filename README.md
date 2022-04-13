@@ -18,7 +18,7 @@ Segmented Image Dataset
 We have used U-Net model for the prediction of mask for selecting only lung portion. Although Accuracy of U-Net model was itself very low so we get very few clean segmented mask. This may be the reason we are getting low accuracy for the segmented data. 
 
 ## Why we want Mask?
-Mask will assure us that our model is learning on the right data of the chest, It can also be helpful for skipping our model at certain pixel of the images.
+Mask will assure us that our model is learning on the right data of the CXR, and build the confidence among user, It can also be helpful for skipping our model at certain pixel of the images.
 
 ## Normal Image Dataset
 
