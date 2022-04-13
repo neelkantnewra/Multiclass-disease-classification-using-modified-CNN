@@ -37,6 +37,8 @@ target are kept categorical
 
 Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kaggle.com/datasets/newra008/cxr-data-for-multiclass-classification)
 
+## Model Architecture
+
 ## Model Performance
 
 ### Without Segmentation
