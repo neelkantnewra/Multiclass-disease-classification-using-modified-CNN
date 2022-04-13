@@ -35,8 +35,8 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
 
 ## Model Performance
 
-Without Segmentation
---------------------
+### Without Segmentation
+
 
 <table>
   <tbody>
