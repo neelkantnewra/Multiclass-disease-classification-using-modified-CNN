@@ -87,7 +87,7 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
   </tbody>
 </table>
 
-## Confusion Metrics
+### Confusion Metrics
 
 <table>
 <tbody>
