@@ -39,6 +39,9 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
 
 ## Model Architecture
 
+### VGG-13
+<img src="https://github.com/neelkantnewra/Multiclass-disease-classification-using-modified-CNN/blob/main/Image/Model-Architecture/VGG-13/VGG-13.png">
+
 ## Model Performance
 
 ### Without Segmentation
