@@ -64,14 +64,14 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
     </tr>
     <tr>
       <td>VGG-13</td>
-      <td align="center">0.9831</td>
-      <td align="center">0.9835</td>
-      <td align="center">0.9829</td>
-      <td align="center">0.9831</td>
-      <td align="center">0.8184</td>
-      <td align="center">0.8179</td>
-      <td align="center">0.8158</td>
-      <td align="center">0.8168</td>
+      <td align="center">0.9512</td>
+      <td align="center">0.9531</td>
+      <td align="center">0.9485</td>
+      <td align="center">0.9508</td>
+      <td align="center">0.8560</td>
+      <td align="center">0.8620</td>
+      <td align="center">0.8508</td>
+      <td align="center">0.8564</td>
     </tr>
     <tr>
       <td>AlexNet</td>
