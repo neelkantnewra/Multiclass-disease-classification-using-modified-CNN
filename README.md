@@ -75,14 +75,14 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
     </tr>
     <tr>
       <td>AlexNet</td>
-      <td align="center">0.9876</td>
-      <td align="center">0.9876</td>
-      <td align="center">0.9868</td>
-      <td align="center">0.9871</td>
-      <td align="center">0.7937</td>
-      <td align="center">0.8015</td>
-      <td align="center">0.7859</td>
-      <td align="center">0.7936</td>
+      <td align="center">0.9683</td>
+      <td align="center">0.9709</td>
+      <td align="center">0.9658</td>
+      <td align="center">0.9683</td>
+      <td align="center">0.8197</td>
+      <td align="center">0.8337</td>
+      <td align="center">0.8132</td>
+      <td align="center">0.8233</td>
     </tr>
   </tbody>
 </table>
@@ -91,6 +91,11 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
 
 <table>
 <tbody>
+  <tr>
+      <td align="center">VGG-13</td>
+      <td align="center">AlexNet</td>
+      <td align="center">VGG-13</td>
+    </tr>
   <tr>
   <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/VGG13/confusion-matrix.png" width="400px"> </td>
     <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/AlexNet/confusion-matrix.png" width="400px"> </td>
