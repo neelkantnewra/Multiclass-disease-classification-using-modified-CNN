@@ -1,11 +1,9 @@
 # Multiclass disease classification using Modified CNN
 
-About
------
+# About
 We will be modifing and testing various model which have achieved higher accuracy for multiclass classification problem to achieve good result.
 
-Method
-------
+# Method
 
 We have collected Chest X-Ray(CXR) images of various dimensions with label `Pneumonia`,`Normal`,`Covid-19`,`Tuberculosis`, and resize it to `128x128` pixel grayscale images. 
 We have developed two types of dataset:
@@ -13,13 +11,12 @@ We have developed two types of dataset:
 - Segmented Image Dataset
 - Normal Image Dataset
 
-Segmented Image Dataset
------------------------
+## Segmented Image Dataset
 We have used U-Net model for the prediction of mask for selecting only lung portion. Although Accuracy of U-Net model was itself very low so we get very few clean segmented mask. This may be the reason we are getting low accuracy for the segmented data. 
 
 <img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Image/Segmented-data.png">
 
-## Why we want Mask?
+### Why we want Mask?
 Mask will assure us that our model is learning on the right data of the CXR, and build the confidence among user, It can also be helpful for skipping model computation at certain pixel of the images.
 
 ## Normal Image Dataset
@@ -37,13 +34,14 @@ target are kept categorical
 
 Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kaggle.com/datasets/newra008/cxr-data-for-multiclass-classification)
 
+# Analysis
+
 ## Model Architecture
 
 ### VGG-13
 <img src="https://github.com/neelkantnewra/Multiclass-disease-classification-using-modified-CNN/blob/main/Image/Model-Architecture/VGG-13/VGG-13.png">
 
 ## Model Performance
-
 ### Without Segmentation
 
 
@@ -89,7 +87,7 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
   </tbody>
 </table>
 
-### Confusion Metrics
+## Confusion Metrics
 
 <table>
 <tbody>
