@@ -7,14 +7,15 @@ Model Architecture to be used for multiclass Classification
 All model are set for 4 classes ['Pneumonia','Normal','Covid-19','Tuberculosis']
 '''
 
-
-
 from keras.models import Sequential,Model
 from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D,Activation,MaxPooling2D
 from keras import Input
 from keras.callbacks import ModelCheckpoint
 from keras.metrics import Precision,Recall
+from tensorflow.keras.optimizers import Adam
+
+
 
 # VGG-13 model
 def VGG13(input_shape):
@@ -43,7 +44,7 @@ def VGG13(input_shape):
     model.add(Dense(64,activation='relu'))
     
     model.add(Dense(4,input_dim=input_shape[0],activation='softmax'))
-    model.compile(loss = 'categorical_crossentropy',optimizer = 'adam', metrics = ['accuracy',Precision(),Recall()])
+    model.compile(loss = 'categorical_crossentropy',optimizer = Adam(learning_rate=1e-3) , metrics = ['accuracy',Precision(),Recall()])
     
     return model
   
@@ -63,5 +64,5 @@ def CNN(input_shape):
     model.add(Dense(64,activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(4,input_dim=input_shape[0],activation='softmax'))
-    model.compile(loss = 'categorical_crossentropy',optimizer = 'adam', metrics = ['accuracy',Precision(),Recall()])
+    model.compile(loss = 'categorical_crossentropy',optimizer = Adam(learning_rate=1e-3) , metrics = ['accuracy',Precision(),Recall()])
     return model
