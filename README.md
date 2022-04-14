@@ -80,9 +80,9 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
 <table>
 <tbody>
   <tr>
-  <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/VGG13/Confusion%20matrix.png" width="400px"> </td>
-    <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/VGG13/Confusion%20matrix.png" width="400px"> </td>
-    <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/VGG13/Confusion%20matrix.png" width="400px"> </td>
+  <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/VGG13/confusion-matrix.png" width="400px"> </td>
+    <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/VGG13/confusion-matrix.png" width="400px"> </td>
+    <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/VGG13/confusion-matrix.png" width="400px"> </td>
   </tr>
 </tbody>
 </table>
