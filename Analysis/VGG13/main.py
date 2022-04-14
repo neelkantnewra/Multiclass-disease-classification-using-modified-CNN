@@ -21,7 +21,9 @@ print(f"Total image for testing: {test_data.shape[0]}")
 
 model = VGG13(input_shape=(128,128,1))
 
-history = model.fit(train_data,train_target,epochs=50,validation_data=(val_data,val_target))
+checkpoint_filepath = './'
+checkpoint = ModelCheckpoint(filepath=checkpoint_filepath,monitor='accuracy',verbose=0,save_best_only = True,mode='auto',save_weights_only=True)
+history = model.fit(train_data,train_target,epochs=30,validation_data=(val_data,val_target),callbacks=[checkpoint])
 
 print(model.evaluate(test_data,test_target,batch_size=1))
 
