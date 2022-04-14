@@ -9,7 +9,7 @@ All model are set for 4 classes ['Pneumonia','Normal','Covid-19','Tuberculosis']
 
 from keras.models import Sequential,Model
 from keras.layers import Dense, Dropout, Flatten
-from keras.layers import Conv2D,Activation,MaxPooling2D
+from keras.layers import Conv2D,Activation,MaxPooling2D,ZeroPadding2D
 from keras import Input
 from keras.callbacks import ModelCheckpoint
 from keras.metrics import Precision,Recall
@@ -46,6 +46,32 @@ def VGG13(input_shape):
     model.add(Dense(4,input_dim=input_shape[0],activation='softmax'))
     model.compile(loss = 'categorical_crossentropy',optimizer = Adam(learning_rate=1e-3) , metrics = ['accuracy',Precision(),Recall()])
     
+    return model
+
+# AlexNet Model
+
+def AlexNet(input_shape):
+    model = Sequential()
+    model.add(Conv2D(96,11,activation='relu',input_shape = input_shape,strides = 4))
+    model.add(MaxPooling2D(pool_size=(3,3),strides=2))
+    model.add(ZeroPadding2D(padding=(2, 2)))
+    model.add(Conv2D(256,5,activation='relu',padding='valid',strides = 1))
+    model.add(MaxPooling2D(pool_size=(3,3),strides=2))
+    model.add(ZeroPadding2D(padding=(1, 1)))
+    model.add(Conv2D(384,3,activation='relu',padding='valid',strides = 1))
+    model.add(ZeroPadding2D(padding=(1, 1)))
+    model.add(Conv2D(384,3,activation='relu',padding='valid',strides = 1))
+    model.add(ZeroPadding2D(padding=(1, 1)))
+    model.add(Conv2D(256,3,activation='relu',padding='valid',strides = 1))
+    model.add(MaxPooling2D(pool_size=(3,3),strides=2))
+    model.add(Dropout(0.5))
+    model.add(Flatten())
+    model.add(Dense(4096,activation='relu'))
+    model.add(Dropout(0.5))
+    model.add(Dense(4096,activation='relu'))
+    model.add(Dropout(0.5))
+    model.add(Dense(4,input_dim=input_shape[0],activation='softmax'))
+    model.compile(loss = 'categorical_crossentropy',optimizer = Adam(learning_rate=1e-3) , metrics = ['accuracy',Precision(),Recall()])
     return model
   
 # Base CNN model
