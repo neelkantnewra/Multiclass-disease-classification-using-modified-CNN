@@ -1,4 +1,4 @@
-# Multiclass disease detection using Modified CNN
+# Multiclass disease classification using Modified CNN
 
 About
 -----
