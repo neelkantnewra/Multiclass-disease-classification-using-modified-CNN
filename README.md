@@ -75,6 +75,17 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
     </tr>
     <tr>
       <td>AlexNet</td>
+      <td align="center">0.9683</td>
+      <td align="center">0.9709</td>
+      <td align="center">0.9658</td>
+      <td align="center">0.9683</td>
+      <td align="center">0.8197</td>
+      <td align="center">0.8337</td>
+      <td align="center">0.8132</td>
+      <td align="center">0.8233</td>
+    </tr>
+    <tr>
+      <td>MobileNet</td>
       <td align="center">0.9918</td>
       <td align="center">0.9924</td>
       <td align="center">0.9915</td>
