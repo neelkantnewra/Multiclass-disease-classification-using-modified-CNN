@@ -44,7 +44,7 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
 ## Model Performance
 ### Without Segmentation
 
-
+#### Metric Table
 <table>
   <tbody>
     <tr>
@@ -98,7 +98,7 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
   </tbody>
 </table>
 
-### Confusion Metrics
+#### Confusion Metrics
 
 <table>
 <tbody>
@@ -117,6 +117,7 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
 
 
 ### With segmentation
+#### Metric Table
 <table>
   <tbody>
     <tr>
@@ -170,7 +171,7 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
   </tbody>
 </table>
 
-### Confusion Metrics
+#### Confusion Metrics
 
 <table>
 <tbody>
