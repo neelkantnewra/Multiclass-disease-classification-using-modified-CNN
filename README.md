@@ -116,11 +116,7 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
 </table>
 
 
-## With segmentation
-
-### Without Segmentation
-
-
+### With segmentation
 <table>
   <tbody>
     <tr>
@@ -140,14 +136,14 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
     </tr>
     <tr>
       <td>VGG-13</td>
-      <td align="center">0.9512</td>
-      <td align="center">0.9531</td>
-      <td align="center">0.9485</td>
-      <td align="center">0.9508</td>
-      <td align="center">0.8560</td>
-      <td align="center">0.8620</td>
-      <td align="center">0.8508</td>
-      <td align="center">0.8564</td>
+      <td align="center">0.9317</td>
+      <td align="center">0.9367</td>
+      <td align="center">0.9287</td>
+      <td align="center">0.9327</td>
+      <td align="center">0.7613</td>
+      <td align="center">0.7668</td>
+      <td align="center">0.7549</td>
+      <td align="center">0.7608</td>
     </tr>
     <tr>
       <td>AlexNet</td>
@@ -172,4 +168,21 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
       <td align="center">0.8427</td>
     </tr>
   </tbody>
+</table>
+
+### Confusion Metrics
+
+<table>
+<tbody>
+  <tr>
+      <td align="center">VGG-13</td>
+      <td align="center">AlexNet</td>
+      <td align="center">MobileNet</td>
+    </tr>
+  <tr>
+  <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/VGG13/segmented-confusion-matrix.png" width="400px"> </td>
+    <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/AlexNet/confusion-matrix.png" width="400px"> </td>
+    <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/MobileNet/confusion-matrix.png" width="400px"> </td>
+  </tr>
+</tbody>
 </table>
