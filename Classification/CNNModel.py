@@ -8,8 +8,8 @@ All model are set for 4 classes ['Pneumonia','Normal','Covid-19','Tuberculosis']
 '''
 
 from keras.models import Sequential,Model
-from keras.layers import Dense, Dropout, Flatten
-from keras.layers import Conv2D,Activation,MaxPooling2D,ZeroPadding2D
+from keras.layers import Dense, Dropout, Flatten,BatchNormalization
+from keras.layers import Conv2D,Activation,MaxPooling2D,ZeroPadding2D,GlobalAveragePooling2D,DepthwiseConv2D
 from keras import Input
 from keras.callbacks import ModelCheckpoint
 from keras.metrics import Precision,Recall
