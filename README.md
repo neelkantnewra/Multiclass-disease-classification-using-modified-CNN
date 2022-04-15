@@ -114,3 +114,62 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
   </tr>
 </tbody>
 </table>
+
+
+## With segmentation
+
+### Without Segmentation
+
+
+<table>
+  <tbody>
+    <tr>
+      <th rowspan="2">Model</th>
+      <th align="center" colspan="4">Training</th>
+      <th align="center" colspan="4">Testing</th>
+    </tr>
+    <tr>
+      <td align="center">Accuracy</td>
+      <td align="center">Precision</td>
+      <td align="center">Recall</td>
+      <td align="center">F1-score</td>
+      <td align="center">Accuracy</td>
+      <td align="center">Precision</td>
+      <td align="center">Recall</td>
+      <td align="center">F1-score</td>
+    </tr>
+    <tr>
+      <td>VGG-13</td>
+      <td align="center">0.9512</td>
+      <td align="center">0.9531</td>
+      <td align="center">0.9485</td>
+      <td align="center">0.9508</td>
+      <td align="center">0.8560</td>
+      <td align="center">0.8620</td>
+      <td align="center">0.8508</td>
+      <td align="center">0.8564</td>
+    </tr>
+    <tr>
+      <td>AlexNet</td>
+      <td align="center">0.9683</td>
+      <td align="center">0.9709</td>
+      <td align="center">0.9658</td>
+      <td align="center">0.9683</td>
+      <td align="center">0.8197</td>
+      <td align="center">0.8337</td>
+      <td align="center">0.8132</td>
+      <td align="center">0.8233</td>
+    </tr>
+    <tr>
+      <td>MobileNet</td>
+      <td align="center">0.9918</td>
+      <td align="center">0.9924</td>
+      <td align="center">0.9915</td>
+      <td align="center">0.9919</td>
+      <td align="center">0.8457</td>
+      <td align="center">0.8449</td>
+      <td align="center">0.8405</td>
+      <td align="center">0.8427</td>
+    </tr>
+  </tbody>
+</table>
