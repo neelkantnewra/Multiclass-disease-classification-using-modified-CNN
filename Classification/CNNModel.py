@@ -144,7 +144,64 @@ def MobileNet(input_shape, num_classes, alpha=1.0 ):
     return model
 
 
-  
+
+# Modified DarkCovidNet
+
+def ModifiedDarkCovidNet(input_shape):
+    model = Sequential()
+    model.add(Conv2D(8,3,activation='relu',input_shape = input_shape,padding='same'))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(2,2))
+    
+    model.add(Conv2D(16,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(8,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(16,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(2,2))
+    
+    model.add(Conv2D(32,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(16,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(32,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(2,2))
+    
+    model.add(Conv2D(64,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(32,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(64,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(2,2))
+    
+    model.add(Conv2D(128,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(64,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(128,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(2,2))
+    
+    model.add(Conv2D(256,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(128,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(256,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(128,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(256,3,activation=LeakyReLU(),padding='same'))
+    model.add(BatchNormalization())
+    model.add(Conv2D(3,3))
+    model.add(Flatten())
+    model.add(Dense(4,input_dim=input_shape[0],activation='softmax'))
+    
+    model.compile(loss = 'categorical_crossentropy',optimizer = Adam(learning_rate=1e-3) , metrics = ['accuracy',Precision(),Recall(),AUC()])
+    return model
+
 # Base CNN model
 def CNN(input_shape):
     model = Sequential()
