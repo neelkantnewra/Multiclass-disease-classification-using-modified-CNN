@@ -95,6 +95,17 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
       <td align="center">0.8405</td>
       <td align="center">0.8427</td>
     </tr>
+    <tr>
+      <td>Modified-DarkCovidNet</td>
+      <td align="center">0.9813</td>
+      <td align="center">0.9814</td>
+      <td align="center">0.9810</td>
+      <td align="center">0.9812</td>
+      <td align="center">0.8313</td>
+      <td align="center">0.8344</td>
+      <td align="center">0.8300</td>
+      <td align="center">0.8322</td>
+    </tr>
   </tbody>
 </table>
 
@@ -177,6 +188,17 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
       <td align="center">0.7795</td>
       <td align="center">0.7704</td>
       <td align="center">0.7749</td>
+    </tr>
+    <tr>
+      <td>Modified-DarkCovidNet</td>
+      <td align="center">0.9483</td>
+      <td align="center">0.9497</td>
+      <td align="center">0.9473</td>
+      <td align="center">0.9485</td>
+      <td align="center">0.7924</td>
+      <td align="center">0.7935</td>
+      <td align="center">0.7924</td>
+      <td align="center">0.7929</td>
     </tr>
   </tbody>
 </table>
