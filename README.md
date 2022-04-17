@@ -112,6 +112,16 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
     <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/AlexNet/confusion-matrix.png" width="400px"> </td>
     <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/MobileNet/confusion-matrix.png" width="400px"> </td>
   </tr>
+  <tr>
+      <td align="center">Modified-DarkCovidNet</td>
+      <td align="center">AlexNet</td>
+      <td align="center">MobileNet</td>
+    </tr>
+  <tr>
+  <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/Modified-DarkCovidNet/confusion-matrix.png" width="400px"> </td>
+    <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/AlexNet/confusion-matrix.png" width="400px"> </td>
+    <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/MobileNet/confusion-matrix.png" width="400px"> </td>
+  </tr>
 </tbody>
 </table>
 
@@ -182,6 +192,16 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
     </tr>
   <tr>
   <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/VGG13/segmented-confusion-matrix.png" width="400px"> </td>
+    <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/AlexNet/segmented-confusion-matrix.png" width="400px"> </td>
+    <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/MobileNet/segmented-confusion-matrix.png" width="400px"> </td>
+  </tr>
+  <tr>
+      <td align="center">Modified-DarkCovidNet</td>
+      <td align="center">AlexNet</td>
+      <td align="center">MobileNet</td>
+    </tr>
+  <tr>
+  <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/Modified-DarkCovidNet/segmented-confusion-matrix.png" width="400px"> </td>
     <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/AlexNet/segmented-confusion-matrix.png" width="400px"> </td>
     <td><img src="https://github.com/neelkantnewra/Multiclass-disease-detection-using-modified-CNN/blob/main/Analysis/MobileNet/segmented-confusion-matrix.png" width="400px"> </td>
   </tr>
