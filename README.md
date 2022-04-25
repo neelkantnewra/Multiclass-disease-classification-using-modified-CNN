@@ -2,7 +2,7 @@
 
 Multiclass classification is always a challenge for many researcher. It is seen that for image classification task mostly for binary classifcation many researcher have achieved accuracy of more than 99%. Starting with the cat and dog classification,image classification technique is very much utilised in the field of medical images, for various diagnosis and prediction. 
 
-<img src="https://github.com/neelkantnewra/Multiclass-disease-classification-using-modified-CNN/blob/main/Image/classification-dog-cat.png">
+<img src="https://github.com/neelkantnewra/Multiclass-disease-classification-using-modified-CNN/blob/main/Image/classification-dog-cat.png" align="center">
 
 # Background
 We will be modifing and testing various model which have achieved higher accuracy for multiclass classification problem to achieve good result for both segmented data as well as normal image for 4 class classification consisting of `Pneumonia`,`Tuberculosis`,`Normal`,`Covid-19`.
