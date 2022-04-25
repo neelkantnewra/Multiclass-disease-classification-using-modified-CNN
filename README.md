@@ -1,5 +1,7 @@
 # Multiclass disease classification using Modified CNN
 
+Multiclass classification is always a challenge for many researcher. It is seen that for image classification task mostly for binary classifcation many researcher have achieved accuracy of more than 99%. Starting with the cat and dog classification,image classification technique is very much utilised in the field of medical images, for various diagnosis and prediction. 
+
 # Background
 We will be modifing and testing various model which have achieved higher accuracy for multiclass classification problem to achieve good result for both segmented data as well as normal image for 4 class classification consisting of `Pneumonia`,`Tuberculosis`,`Normal`,`Covid-19`.
 
