@@ -1,7 +1,7 @@
 # Multiclass disease classification using Modified CNN
 
-# About
-We will be modifing and testing various model which have achieved higher accuracy for multiclass classification problem to achieve good result.
+# Background
+We will be modifing and testing various model which have achieved higher accuracy for multiclass classification problem to achieve good result for both segmented data as well as normal image for 4 class classification consisting of `Pneumonia`,`Tuberculosis`,`Normal`,`Covid-19`.
 
 # Method
 
