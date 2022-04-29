@@ -1,0 +1,25 @@
+Perumal V, Narayanan V, Rajasekar SJ. Detection of COVID-19 using CXR and CT images using Transfer Learning and Haralick features. Applied Intelligence. 2021 Jan;51(1):341-58.
+
+Pereira RM, Bertolini D, Teixeira LO, Silla Jr CN, Costa YM. COVID-19 identification in chest X-ray images on flat and hierarchical classification scenarios. Computer methods and programs in biomedicine. 2020 Oct 1;194:105532.
+
+Shotton J, Winn J, Rother C, Criminisi A. Textonboost for image understanding: Multi-class object recognition and segmentation by jointly modeling texture, layout, and context. International journal of computer vision. 2009 Jan;81(1):2-3.
+
+Apostolopoulos ID, Mpesiana TA. Covid-19: automatic detection from x-ray images utilizing transfer learning with convolutional neural networks. Physical and engineering sciences in medicine. 2020 Jun;43(2):635-40.
+
+Basu S, Mitra S, Saha N. Deep learning for screening covid-19 using chest x-ray images. In2020 IEEE Symposium Series on Computational Intelligence (SSCI) 2020 Dec 1 (pp. 2521-2527). IEEE.
+
+Hasan MD, Ahmed S, Abdullah ZM, Monirujjaman Khan M, Anand D, Singh A, AlZain M, Masud M. Deep learning approaches for detecting pneumonia in COVID-19 patients by analyzing chest X-ray images. Mathematical Problems in Engineering. 2021 May 19;2021.
+
+Ibrahim AU, Ozsoz M, Serte S, Al-Turjman F, Yakoi PS. Pneumonia classification using deep learning from chest X-ray images during COVID-19. Cognitive Computation. 2021 Jan 4:1-3.
+
+Redie DK, Sirko AE, Demissie TM, Teferi SS, Shrivastava VK, Verma OP, Sharma TK. Diagnosis of COVID-19 using chest X-ray images based on modified DarkCovidNet model. Evolutionary Intelligence. 2022 Mar 9:1-0.
+
+Krizhevsky A, Sutskever I, Hinton GE. Imagenet classification with deep convolutional neural networks. Advances in neural information processing systems. 2012;25.
+
+Lai WS, Huang JB, Ahuja N, Yang MH. Deep laplacian pyramid networks for fast and accurate super-resolution. InProceedings of the IEEE conference on computer vision and pattern recognition 2017 (pp. 624-632).
+
+Yu D, Wang H, Chen P, Wei Z. Mixed pooling for convolutional neural networks. InInternational conference on rough sets and knowledge technology 2014 Oct 24 (pp. 364-375). Springer, Cham.
+
+Ronneberger O, Fischer P, Brox T. U-net: Convolutional networks for biomedical image segmentation. InInternational Conference on Medical image computing and computer-assisted intervention 2015 Oct 5 (pp. 234-241). Springer, Cham.
+
+Neelkant Newra. CXR DATA for Multiclass classification. 2022. doi: 10.34740/KAGGLE/DSV/3458562. url: https://www.kaggle.com/dsv/3458562.
