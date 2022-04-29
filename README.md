@@ -233,3 +233,6 @@ Prepared Dataset Link: [CXR DATA for Multiclass Classfification](https://www.kag
   </tr>
 </tbody>
 </table>
+
+# Comparision
+<img src="https://github.com/neelkantnewra/Multiclass-disease-classification-using-modified-CNN/blob/main/Report/Accuracy%20Comparison%20Original%20VS%20Segmented.svg">
