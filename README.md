@@ -1,4 +1,4 @@
-# Multiclass disease classification using Modified CNN
+# Multiclass Disease Classification using Modified CNN and Segmented Chest X-ray
 
 Multiclass classification is always a challenge for many researcher. It is seen that for image classification task mostly for binary classifcation many researcher have achieved accuracy of more than 99%. Starting with the cat and dog classification,image classification technique is very much utilised in the field of medical images, for various diagnosis and prediction. 
 
